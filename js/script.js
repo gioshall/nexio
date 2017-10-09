@@ -7,7 +7,18 @@ $(document).ready(function() {
 		scrollingSpeed: 500,
 		resize: !0,
 		touchSensitivity: 7,
-		normalScrollElementTouchThreshold: 3
+		normalScrollElementTouchThreshold: 3,
+		// fitToSection: false,
+		onLeave: function(index, nextIndex, direction) {
+			var leavingSection = $(this);
+			if(index == 2 && direction =='down'){
+				$('.scene').hide();
+
+			}
+			if(index == 3 && direction =='up'){
+				$('.scene').show();
+			}
+		}
 	});
 });
 

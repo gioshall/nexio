@@ -113,7 +113,7 @@
 						this.started = true;
 						anime({
 							targets: this.DOM.el,
-							duration: 300,
+							duration: 500,
 							easing: 'linear',
 							opacity: [0,1]
 						});
@@ -121,8 +121,8 @@
 					else {
 						const mousepos = getMousePos(ev);					
 						const rotZ = 2*tilt.rz/this.win.height*mousepos.y - tilt.rz;
-						const scaleX = mousepos.x < this.win.width/2 ? lineEq(tilt.sx[0],tilt.sx[1],this.win.width/2,0,mousepos.x) : lineEq(tilt.sx[1],tilt.sx[0],this.win.width,this.win.width/2,mousepos.x);
-						const scaleY = mousepos.y < this.win.height/2 ? lineEq(tilt.sy[0],tilt.sy[1],this.win.height/2,0,mousepos.y) : lineEq(tilt.sy[1],tilt.sy[0],this.win.height,this.win.height/2,mousepos.y);
+						const scaleX = mousepos.x < this.win.width/10 ? lineEq(tilt.sx[0],tilt.sx[1],this.win.width/10,0,mousepos.x) : lineEq(tilt.sx[1],tilt.sx[0],this.win.width,this.win.width/10,mousepos.x);
+						const scaleY = mousepos.y < this.win.height/10 ? lineEq(tilt.sy[0],tilt.sy[1],this.win.height/10,0,mousepos.y) : lineEq(tilt.sy[1],tilt.sy[0],this.win.height,this.win.height/10,mousepos.y);
 						const transX = 2*tilt.tx/this.win.width*mousepos.x - tilt.tx;
 						const transY = 2*tilt.ty/this.win.height*mousepos.y - tilt.ty;
 

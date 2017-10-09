@@ -202,28 +202,36 @@ header .nav li.active a {
 
 .section.section-02 .cb-a {
 	left: 55%;
-	/*top: -85px;*/
+	animation: ani-ball 5s infinite;
 }
 
 .section.section-02 .cb-b {
 	right: -3%;
-	/*top: 15%;*/
+	animation: ani-ball 8s infinite;
 }
 
 .section.section-02 .cb-c {
 	left: -2%;
-	/*top: 35%;*/
+	animation: ani-ball 4s infinite;
 }
 
 .section.section-02 .cb-d {
 	left: 32%;
-	/*top: -5%;*/
 	height: 110%;
 }
 
 .section.section-02 .cb-e {
 	left: 55%;
-	/*bottom: 5%;*/
+	animation: ani-ball 6s infinite;
+}
+
+
+
+
+@keyframes ani-ball {
+	0% { transform: scale(1) }
+	60% { transform: scale(1.1) }
+	100% { transform: scale(1) }
 }
 
 .section.section-03 {
@@ -268,6 +276,11 @@ header .nav li.active a {
 	position: relative;
 	margin: 15px auto;
 	border: 2px solid #fff;
+	transition: 0.3s;
+}
+
+.service-cont .service-item .icon:hover {
+	transform: scale(1.05);
 }
 
 .service-cont .service-item .icon img {
@@ -340,6 +353,5 @@ header .nav li.active a {
 	border: 1px solid #fff;
 	border-radius: 20px;
 	margin: 15px auto 5px;
-	cursor: pointer;
-	
+	cursor: pointer;	
 }
