@@ -38,7 +38,15 @@ header .logo {
 	height: 50px;
 	top: 10px;
 	left: 10px;
+	cursor: pointer;
+	z-index: 2;
+	transition: 0.2s;
 	background: url(../img/nexio-logo.svg) center/auto 100% no-repeat;
+}
+
+header .logo.logo-bk {
+	opacity: 0;
+	background: url(../img/nexio-logo-bk.svg) center/auto 100% no-repeat;
 }
 
 header .nav ul {
@@ -58,10 +66,67 @@ header .nav li {
 header .nav li a {
 	text-decoration: none;
 	color: #fff;
+	transition: 0.2s;
 }
 
 header .nav li.active a {
 	color: #ffcf3f;
+}
+
+header.bk .logo {
+	opacity: 0;
+}
+
+header.bk .logo-bk {
+	opacity: 1;
+}
+
+header.bk .nav li a {
+	color: #444;
+}
+
+header.bk .nav li.active a {
+	color: #ff4400;
+}
+
+header .hmb {
+	position: absolute;
+	height: 30px;
+	width: 35px;
+	box-sizing: border-box;
+	right: 20px;
+	top: 20px;
+	display: none;
+}
+
+header .hmb:before,
+header .hmb:after {
+	width: 25px;
+	height: 3px;
+	border-radius: 2px;
+	content: '';
+	background-color: #dadada;
+	position: absolute;
+	left: 5px;
+	transition: 0.4s;
+}
+
+header .hmb:before {
+	top: 8px;
+}
+
+header .hmb:after {
+	bottom: 8px;
+}
+
+header.mb-show .nav .hmb:before {
+	top: 13.5px;
+	transform: rotate(45deg);
+}
+
+header.mb-show .nav .hmb:after {
+	bottom: 13.5px;
+	transform: rotate(-45deg);
 }
 
 .fullpage-wrapper {

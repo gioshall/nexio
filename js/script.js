@@ -8,17 +8,27 @@ $(document).ready(function() {
 		resize: !0,
 		touchSensitivity: 7,
 		normalScrollElementTouchThreshold: 3,
-		// fitToSection: false,
-		onLeave: function(index, nextIndex, direction) {
-			var leavingSection = $(this);
-			if(index == 2 && direction =='down'){
-				$('.scene').hide();
 
-			}
-			if(index == 3 && direction =='up'){
+		afterLoad: function(anchorLink, index){
+			var loadedSection = $(this);
+			if(index == 1){
 				$('.scene').show();
+				$('header').attr('class','');
+			}
+			if(index == 4 || anchorLink == 'about'){
+				$('header').addClass('bk');
+			}
+			if(index == 3){
+				$('.scene').hide();
+				$('header').removeClass('bk');
 			}
 		}
+	});
+	$('header .logo').click(function(){
+		$.fn.fullpage.moveTo(1, 0);
+	});
+	$('header .hmb').click(function(){
+		$('header').toggleClass('mb-show');
 	});
 });
 
