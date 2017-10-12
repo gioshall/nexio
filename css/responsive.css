@@ -115,6 +115,22 @@
 	.service-cont .service-item p {
 		display: none;
 	}
+
+	.section.section-04 .screen {
+		width: 250%;
+		transform: scale(0.5) translateX(-55%) translateY(-50%);
+	}
+	.section.section-04 .screen img {
+		top: -25%;
+	}
+	.section.section-04 .text-block {
+		padding-top: 40%;
+	}
+	.section.section-05 .map-info {
+		width: 90%;
+		height: auto;
+		padding: 10px 15px;
+	}
 }
 
 @media screen and (max-width: 375px) {
@@ -127,6 +143,11 @@
 }
 
 @media screen and (max-width: 320px) {
+	header .logo {
+		top: 15px;
+		left: 0;
+		height: 40px;
+	}
 	.cont {
 		padding: 0 25px;
 	}
@@ -135,5 +156,11 @@
 	}
 	.des {
 		font-size: 16px;
+	}
+	.main-wrap .title {
+		font-size: 24px;
+	}
+	.service-cont .service-item h4 {
+		font-size: 18px;
 	}
 }
