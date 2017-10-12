@@ -38,7 +38,7 @@ function initMap() {
 		lat: 25.07938,
 		lng: 121.5711507
 	};
-	var image = '../img/map-marker.png';
+	var image = 'https://i.imgur.com/aK1MHA6.png';
 	var map = new google.maps.Map(document.getElementById('map'), {
 		scaleControl: true,
 		center: nexio,
