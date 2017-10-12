@@ -5,8 +5,8 @@
 }
 
 @font-face {
-  font-family: "CenturyGothic";
-  src: url("../fonts/CenturyGothic.ttf") format("ttf");
+  font-family: 'CenturyGothic';
+  src: url('../fonts/CenturyGothic.woff') format('woff');
   font-weight: normal;
   font-style: normal;
 }
