@@ -30,6 +30,9 @@ $(document).ready(function() {
 	$('header .hmb').click(function() {
 		$('header').toggleClass('mb-show');
 	});
+	$('.nav li a').click(function() {
+		$('header').removeClass('mb-show');
+	});
 	$('.btn-career').click(function() {
 		$('.career').addClass('show');
 	});
