@@ -79,8 +79,6 @@
 		constructor(el) {
 			this.DOM = {};
 			this.DOM.el = el;
-			this.DOM.el.style.opacity = 0;
-			this.DOM.el.style.transition = 'transform 2s ease-out';
 			this.DOM.pathEl = this.DOM.el.querySelector('path');
 			this.paths = this.DOM.pathEl.getAttribute('pathdata:id').split(';')
 			this.paths.splice(this.paths.length, 0, this.DOM.pathEl.getAttribute('d'));
@@ -113,18 +111,17 @@
 						this.started = true;
 						anime({
 							targets: this.DOM.el,
-							duration: 500,
-							easing: 'linear',
-							opacity: [0,1]
+							duration: 5000,
+							easing: 'linear'
 						});
 					}
 					else {
 						const mousepos = getMousePos(ev);					
-						const rotZ = 2*tilt.rz/this.win.height*mousepos.y - tilt.rz;
-						const scaleX = mousepos.x < this.win.width/10 ? lineEq(tilt.sx[0],tilt.sx[1],this.win.width/10,0,mousepos.x) : lineEq(tilt.sx[1],tilt.sx[0],this.win.width,this.win.width/10,mousepos.x);
-						const scaleY = mousepos.y < this.win.height/10 ? lineEq(tilt.sy[0],tilt.sy[1],this.win.height/10,0,mousepos.y) : lineEq(tilt.sy[1],tilt.sy[0],this.win.height,this.win.height/10,mousepos.y);
-						const transX = 2*tilt.tx/this.win.width*mousepos.x - tilt.tx;
-						const transY = 2*tilt.ty/this.win.height*mousepos.y - tilt.ty;
+						const rotZ = 1.05*tilt.rz/this.win.height*mousepos.y - tilt.rz;
+						const scaleX = mousepos.x < this.win.width/80 ? lineEq(tilt.sx[0],tilt.sx[1],this.win.width/80,0,mousepos.x) : lineEq(tilt.sx[1],tilt.sx[0],this.win.width,this.win.width/80,mousepos.x);
+						const scaleY = mousepos.y < this.win.height/80 ? lineEq(tilt.sy[0],tilt.sy[1],this.win.height/80,0,mousepos.y) : lineEq(tilt.sy[1],tilt.sy[0],this.win.height,this.win.height/80,mousepos.y);
+						const transX = 1.05*tilt.tx/this.win.width*mousepos.x - tilt.tx;
+						const transY = 1.05*tilt.ty/this.win.height*mousepos.y - tilt.ty;
 
 						this.DOM.el.style.transform = `translate3d(${transX}px, ${transY}px,0) rotate3d(0,0,1,${rotZ}deg) scale3d(${scaleX},${scaleY},1)`;
 					}

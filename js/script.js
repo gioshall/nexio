@@ -12,14 +12,16 @@ $(document).ready(function() {
 		afterLoad: function(anchorLink, index) {
 			var loadedSection = $(this);
 			if (index == 1) {
-				$('.scene').show();
 				$('header').attr('class', '');
+			}
+			if (index <= 2) {
+				$('.scene').show();
+			} else {
+				$('.scene').hide().attr('style','');
 			}
 			if (index >= 4 || anchorLink == 'about') {
 				$('header').addClass('bk');
-			}
-			if (index == 3) {
-				$('.scene').hide();
+			} else  {
 				$('header').removeClass('bk');
 			}
 		}
