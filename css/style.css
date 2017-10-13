@@ -17,7 +17,7 @@
 }
 
 body {
-	font-family: 'CenturyGothic', CenturyGothic, AppleGothic, sans-serif;
+	font-family: 'CenturyGothic', CenturyGothic, AppleGothic, LiHei Pro, Heiti TC, Microsoft JhengHei, sans-serif;
 	min-height: 100vh;
 	width: 100vw;
 	-webkit-font-smoothing: antialiased;
@@ -385,7 +385,7 @@ header.mb-show .nav .hmb:after {
 	height: 280px;
 	padding: 10px 20px;
 	box-sizing: border-box;
-	background-color: rgba(0,0,0,1);
+	background-color: rgba(0,0,0,0.8);
 	z-index: 10;
 	top: calc(50% - 140px);
 	left: 5%;
@@ -407,8 +407,14 @@ header.mb-show .nav .hmb:after {
 	font-size: 11px;
 }
 
+.section.section-05 .map-info .btn-g {
+	text-align: center;
+	margin: 15px auto 5px;
+}
+
 .section.section-05 .map-info .btn {
 	position: relative;
+	display: inline-block;
 	font-size: 13px;
 	width: 110px;
 	height: 35px;
@@ -417,6 +423,98 @@ header.mb-show .nav .hmb:after {
 	color: #fff;
 	border: 1px solid #fff;
 	border-radius: 20px;
-	margin: 15px auto 5px;
+	margin: 0 5px;
 	cursor: pointer;	
+}
+
+.section.section-05 .career {
+	position: absolute;
+	width: 100vw;
+	height: 100vh;
+	z-index: 10;
+	top: 0;
+	left: 0;
+	overflow: hidden;
+	transform: scale(0);
+	transition: 0.2s ease;
+}
+
+.section.section-05 .career.show {
+	transform: scale(1);
+}
+
+.section.section-05 .career-list {
+	position: absolute;
+	left: 0;
+	top: 0;
+	background-image: linear-gradient(134deg, #0F5DC8 0%, #AC10CD 84%, #AC10CD 84%, #CA02CE 100%);
+	width: 100%;
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	opacity: .95;
+}
+
+.section.section-05 .career-list > div {
+	width: 90vw;
+	height: 90vh;
+	min-height: 250px;
+	overflow: auto; 
+	padding: 80px 20px 20px;
+	color: #dadada;
+	box-sizing: border-box;
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+}
+
+.section.section-05 .career-list > div > div {
+	width: calc(100% / 3);
+	vertical-align: top;
+	padding: 10px 20px;
+	box-sizing: border-box;
+	height: 150px;
+}
+
+.section.section-05 .career-list > div > div a {
+	color: #fff;
+	text-decoration: none;
+	font-size: 21px;
+	margin-bottom: 10px;
+	display: block;
+	font-weight: bold;
+	transition: 0.2s;
+}
+
+.section.section-05 .career-list > div > div a:hover {
+	color: #fff896;
+}
+
+.section.section-05 .career-list > div > div a + div,
+.section.section-05 .career-list > div p,
+.section.section-05 .career-list span {
+	display: none;
+}
+
+.section.section-05 .career .career-close {
+	position: absolute;
+	font-size: 18px;
+	width: 30px;
+	height: 30px;
+	line-height: 28px;
+	border-radius: 50%;
+	display: block;
+	border: 1px solid #fff;
+	bottom: 15px;
+	color: #fff;
+	text-align: center;
+	left: calc(50% - 15px);
+	cursor: pointer;
+	transition: 0.2s;
+}
+
+.section.section-05 .career .career-close:hover {
+	color: #fff896;
+	border: 1px solid #fff896;
 }

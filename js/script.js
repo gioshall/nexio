@@ -15,7 +15,7 @@ $(document).ready(function() {
 				$('.scene').show();
 				$('header').attr('class', '');
 			}
-			if (index == 4 || anchorLink == 'about') {
+			if (index >= 4 || anchorLink == 'about') {
 				$('header').addClass('bk');
 			}
 			if (index == 3) {
@@ -30,19 +30,57 @@ $(document).ready(function() {
 	$('header .hmb').click(function() {
 		$('header').toggleClass('mb-show');
 	});
+	$('.btn-career').click(function() {
+		$('.career').addClass('show');
+	});
+	$('.career-close').click(function() {
+		$('.career').removeClass('show');
+	});
+	$('.career div, .career a').attr('style','');
 });
+
+// scroll
+$(window).scroll(function() {
+	var sc = $(this).scrollTop();
+	var wHeight = $(window).height();
+	if (sc >= wHeight) {
+		$('.cb-01').css('bottom', -10 - 0.25 * (sc - wHeight));
+		$('.cb-02').css('top', -10 - 0.2 * (sc - wHeight));
+	}
+
+	$('.cb-03').css('bottom', -0.1 * (sc - wHeight));
+
+	$('.cb-a').css('top', -0.1 * (sc / 0.5));
+	$('.cb-b').css('top', 200 - 0.1 * (sc / 0.9));
+	$('.cb-c').css('top', 500 - 0.1 * (sc / 0.3));
+	$('.cb-d').css('top', -0.05 * (sc / 0.9));
+	$('.cb-e').css('top', 600 - 0.1 * (sc / 0.9));
+
+	$('.screen img:nth-of-type(1)').css('top', -0.1 * (sc / 0.9));
+	$('.screen img:nth-of-type(2)').css('top', -0.1 * (sc / 0.8));
+	$('.screen img:nth-of-type(4)').css('top', 80 - 0.1 * (sc / 0.7));
+	$('.screen img:nth-of-type(5)').css('top', -0.1 * (sc / 0.9));
+
+})
 
 // map
 function initMap() {
 	var nexio = {
-		lat: 25.07938,
-		lng: 121.5711507
+		lat: 25.079393,
+		lng: 121.573344
 	};
-	var image = 'https://i.imgur.com/aK1MHA6.png';
+	var image = {
+		url: 'https://gioshall.github.io/nexio/img/map-marker.png',
+		size: new google.maps.Size(50, 50),
+		origin: new google.maps.Point(0, 0),
+  		anchor: new google.maps.Point(14, 25),
+		scaledSize: new google.maps.Size(35, 35)
+	};
+
 	var map = new google.maps.Map(document.getElementById('map'), {
 		scaleControl: true,
 		center: nexio,
-		zoom: 15,
+		zoom: 17,
 		zoomControl: true,
 		mapTypeControl: false,
 		scaleControl: false,
@@ -63,11 +101,7 @@ function initMap() {
 			"featureType": "poi",
 			"elementType": "all",
 			"stylers": [{
-				"visibility": "simplified"
-			}, {
-				"saturation": -100
-			}, {
-				"lightness": 51
+				"visibility": "off"
 			}]
 		}, {
 			"featureType": "road.highway",
@@ -75,7 +109,9 @@ function initMap() {
 			"stylers": [{
 				"visibility": "simplified"
 			}, {
-				"saturation": -100
+				"saturation": -80
+			}, {
+				"lightness": 50
 			}]
 		}, {
 			"featureType": "road.arterial",
@@ -85,7 +121,7 @@ function initMap() {
 			}, {
 				"saturation": -100
 			}, {
-				"lightness": 30
+				"lightness": 20
 			}]
 		}, {
 			"featureType": "road.local",
@@ -212,27 +248,3 @@ function initMap() {
 	});
 
 }
-
-// scroll
-$(window).scroll(function() {
-	var sc = $(this).scrollTop();
-	var wHeight = $(window).height();
-	if (sc >= wHeight) {
-		$('.cb-01').css('bottom', -10 - 0.25 * (sc - wHeight));
-		$('.cb-02').css('top', -10 - 0.2 * (sc - wHeight));
-	}
-
-	$('.cb-03').css('bottom', -0.1 * (sc - wHeight));
-
-	$('.cb-a').css('top', -0.1 * (sc / 0.5));
-	$('.cb-b').css('top', 200 - 0.1 * (sc / 0.9));
-	$('.cb-c').css('top', 500 - 0.1 * (sc / 0.3));
-	$('.cb-d').css('top', -0.05 * (sc / 0.9));
-	$('.cb-e').css('top', 600 - 0.1 * (sc / 0.9));
-
-	$('.screen img:nth-of-type(1)').css('top', -0.1 * (sc / 0.9));
-	$('.screen img:nth-of-type(2)').css('top', -0.1 * (sc / 0.8));
-	$('.screen img:nth-of-type(4)').css('top', 80 - 0.1 * (sc / 0.7));
-	$('.screen img:nth-of-type(5)').css('top', -0.1 * (sc / 0.9));
-
-})

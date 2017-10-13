@@ -132,6 +132,11 @@
 		height: auto;
 		padding: 10px 15px;
 	}
+	.section.section-05 .career-list > div > div {
+		width: 100%;
+		height: auto;
+		padding-bottom: 20px;
+	}
 }
 
 @media screen and (max-width: 375px) {
