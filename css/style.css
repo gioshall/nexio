@@ -309,6 +309,15 @@ header.mb-show .nav .hmb:after {
 	justify-content: center;
 }
 
+.section.section-03 .title {
+	width: 100%;
+	text-align: center;
+}
+
+.section.section-03 .des {
+	margin-bottom: 30px;
+}
+
 .service-cont {
 	width: 100%;
 	max-width: 1165px;
@@ -383,7 +392,7 @@ header.mb-show .nav .hmb:after {
 .section.section-05 .map-info {
 	position: absolute;
 	width: 450px;
-	height: 280px;
+	height: auto;
 	padding: 10px 20px;
 	box-sizing: border-box;
 	background-color: rgba(0,0,0,0.8);
