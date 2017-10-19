@@ -1,7 +1,7 @@
 // fullpage
 $(document).ready(function() {
 	$("#fullpage").fullpage({
-		anchors: ["home", "about", "service", "offering", "contact"],
+		anchors: ["home", "about", "service", "expertise", "contact"],
 		menu: ".nav",
 		autoScrolling: false,
 		scrollingSpeed: 500,
