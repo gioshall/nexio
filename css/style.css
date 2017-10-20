@@ -17,7 +17,7 @@
 }
 
 body {
-	font-family: 'CenturyGothic', CenturyGothic, AppleGothic, LiHei Pro, Heiti TC, Microsoft JhengHei, sans-serif;
+	font-family: 'CenturyGothic', 'PingFangSC-Regular', Microsoft JhengHei, sans-serif;
 	min-height: 100vh;
 	width: 100vw;
 	-webkit-font-smoothing: antialiased;
@@ -71,6 +71,24 @@ header .nav li a {
 
 header .nav li.active a {
 	color: #ffcf3f;
+}
+
+header .nav li.lang .en {
+	display: none;
+}
+
+header .nav li.lang a {
+	width: 40px;
+	display: inline-block;
+	text-align: center;
+}
+
+header .nav li.lang.zh .en {
+	display: block;
+}
+
+header .nav li.lang.zh .zh {
+	display: none;
 }
 
 header.bk .logo {
@@ -400,7 +418,7 @@ header.mb-show .nav .hmb:after {
 	top: calc(50% - 140px);
 	left: 5%;
 	color: #fff;
-	line-height: 1.4;
+	line-height: 1.6;
 }
 
 .section.section-05 .map-info h4 {

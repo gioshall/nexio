@@ -11,7 +11,6 @@
 		<link rel="stylesheet" type="text/css" href="css/normalize.css" />
 		<link rel="stylesheet" type="text/css" href="css/style.css" />
 		<link rel="stylesheet" type="text/css" href="css/responsive.css" />
-		<script>document.documentElement.className="js";var supportsCssVars=function(){var e,t=document.createElement("style");return t.innerHTML="root: { --tmp-var: bold; }",document.head.appendChild(t),e=!!(window.CSS&&window.CSS.supports&&window.CSS.supports("font-weight","var(--tmp-var)")),t.parentNode.removeChild(t),e};supportsCssVars()||alert("Please view this demo in a modern browser that supports CSS Variables.");</script>
 	</head>
 	<body>
 
@@ -25,6 +24,7 @@
 				<li data-menuanchor="service"><a href="#service">service</a></li>
 				<li data-menuanchor="expertise"><a href="#expertise">expertise</a></li>
 				<li data-menuanchor="contact"><a href="#contact">contact</a></li>
+				<li class="lang"><a href="javascript:void(0)" class="zh">中文</a><a href="javascript:void(0)" class="en">EN</a></li>
 			</ul>
 			<div class="hmb"></div>
 		</div>
@@ -49,10 +49,8 @@
 		<!-- main -->
 		<div class="section section-01" id="section1">
 			<div class="cont">
-				<h2 class="title">Welcome into our world</h2>
-				<div class="des">
-					We enhance your business competitiveness
-				</div>
+				<h2 class="title" text="tagline"></h2>
+				<div class="des" text="tagsub"></div>
 			</div>	
 		</div>
 
@@ -75,30 +73,29 @@
 
 			<div class="main-wrap">
 				<div class="text-block">
-					<h2 class="title">ABOUT US</h2>
-					<div class="des">
-						Our team focus on flexible core modules to provide key technologies for deployment and management.
+					<h2 class="title" text="abouttitle"></h2>
+					<div class="des" text="aboutdes">
 					</div>
 				</div>
 			</div>
 		</div>
 		<div class="section section-03" id="section3">
 			<div class="main-wrap">
-				<h2 class="title">Our Services</h2>
-				<div class="des">Continuous innovation and transformation is our mission</div>
+				<h2 class="title" text="servicetitle"></h2>
+				<div class="des" text="servicedes"></div>
 				<div class="service-cont">
 					<div class="service-item">
 						<div class="icon">
 							<img src="img/about-icon-01.svg">
 						</div>
-						<h4>Innovation</h4>
+						<h4 text="service01"></h4>
 						<!-- <p>Your business started from an idea—a unique idea. We want to work with you in making it possible from your idea to a dynamic force in the industry that will inevitably draw people in.</p> -->
 					</div>
 					<div class="service-item">
 						<div class="icon">
 							<img src="img/about-icon-02.svg">
 						</div>
-						<h4>Design</h4>
+						<h4 text="service02"></h4>
 						<!-- <p>The range of business services we offer is truly impressive. From live dealer services to marketing support of your business, from customer support to hosting services - we can help you solve any problems you encounter</p> -->
 					
 					</div>
@@ -106,7 +103,7 @@
 						<div class="icon">
 							<img src="img/about-icon-03.svg">
 						</div>
-						<h4>Transformation</h4>
+						<h4 text="service03"></h4>
 						<!-- <p>Let our system move for you. We develop platforms customized to your business’ needs, focusing on creating it to be both intuitive and effective. Simple and easy—without sacrificing efficiency and cost!</p> -->
 						
 					</div>
@@ -124,10 +121,8 @@
 			<div class="main-wrap">
 				
 				<div class="text-block">
-					<h2 class="title">Our Expertise</h2>
-					<div class="des">
-						Nexio team focuses on technology trends and system architecture research to further build advanced systems.
-					</div>
+					<h2 class="title" text="experttitle"></h2>
+					<div class="des" text="expertdes"></div>
 				</div>
 			</div>
 		</div>
@@ -135,16 +130,16 @@
 			
 			<div id="map"></div>
 			<div class="map-info">
-				<h4>Contact Us</h4>
-				<div class="sub">Get in touch with us</div>
-				<p>If you would like to get in touch with us please contact us at the email below
-				<br><br>
+				<h4 text="contacttitle"></h4>
+				<div class="sub" text="contactdes"></div>
+				<p><!-- If you would like to get in touch with us please contact us at the email below
+				<br><br> -->
 				Email. service@nexio.com<br>TEL. +886 27970058<br>
-				ADD. 6F,No. 57, Zhouzi Street, Neihu District, Taipei City 114 , Taiwan
+				ADD. <span text="address"></span>
 				</p>
 				<div class="btn-g">
-					<div class="btn">Email Us</div>
-					<div class="btn btn-career">Join Us</div>
+					<div class="btn" text="email"></div>
+					<div class="btn btn-career"  text="join"></div>
 				</div>
 			</div>
 
@@ -166,6 +161,7 @@
 	</div>
 	<script src="js/jquery-1.9.1.min.js"></script>
 	<script src="js/jquery.fullPage.min.js"></script>
+	<script type="text/javascript" src="js/i18n.js"></script>
 	<script src="js/anime.min.js"></script>
 	<script src="js/shape.js"></script>
 	<script src="js/script.js"></script>
