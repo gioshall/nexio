@@ -59,7 +59,7 @@ $(window).scroll(function() {
 	$('.cb-b').css('top', 200 - 0.1 * (sc / 0.9));
 	$('.cb-c').css('top', 500 - 0.1 * (sc / 0.3));
 	$('.cb-d').css('top', -0.05 * (sc / 0.9));
-	$('.cb-e').css('bottom', - 0.1 * (sc / 0.9));
+	$('.cb-e').css('bottom', - 0.1 * (sc / 2.5));
 
 	$('.screen img:nth-of-type(1)').css('top', -0.1 * (sc / 0.9));
 	$('.screen img:nth-of-type(2)').css('top', -0.1 * (sc / 0.8));
