@@ -55,6 +55,12 @@
 	.cont {
 		padding: 0 40px;
 	}
+	.scene {
+		top: 25vh;
+		left: -10%;
+		width: 120%;
+		height: 50vh;
+	}
 	.title {
 		font-size: 50px;
 		line-height: 1.1;

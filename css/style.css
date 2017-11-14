@@ -195,10 +195,10 @@ header.mb-show .nav .hmb:after {
 
 .scene {
 	position: absolute;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
+	top: 5vh;
+	left: 5%;
+	width: 90%;
+	height: 90vh;
 	pointer-events: none;
 	transition: transform 2s ease-out;
 }
