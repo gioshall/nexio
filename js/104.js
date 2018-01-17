@@ -9,7 +9,7 @@ var j104Widget = function(oo) {
 				var tmpIMG = document.createElement('IMG');
 				tmpIMG.cssText = "width:0px;height:0px;";
 				tmpIMG.style.display = "none";
-				tmpIMG.src = "http://www.104.com.tw/jobbank/area/edm/etb/jcb.cfm?ac=i&h=" + encodeURIComponent(location.href);
+				tmpIMG.src = "" + encodeURIComponent(location.href);
 				vb.appendChild(tmpIMG);
 			};
 		if (typeof window.onload != 'function') {
