@@ -9,7 +9,7 @@ var j104Widget = function(oo) {
 				var tmpIMG = document.createElement('IMG');
 				tmpIMG.cssText = "width:0px;height:0px;";
 				tmpIMG.style.display = "none";
-				tmpIMG.src = "" + encodeURIComponent(location.href);
+				tmpIMG.src = "https://www.nexiosoft.com/img/nexio-logo-bk.svg" + encodeURIComponent(location.href);
 				vb.appendChild(tmpIMG);
 			};
 		if (typeof window.onload != 'function') {
