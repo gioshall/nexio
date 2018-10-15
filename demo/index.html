@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>斗金</title>
+</head>
+<style>
+body {
+    margin: 0;
+    padding: 0;
+    position: relative;
+}
+.mainpic {
+    width: 100%;
+    position: relative;
+    display: block;
+    margin: auto;
+    max-width: 568px;
+}
+.form {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.7);
+    top: 0;
+    left: 0;
+    justify-content: center;
+    align-items: center;
+    display: none;
+}
+.form.show {
+    display: flex;
+}
+
+
+</style>
+<body>
+<img src="a.jpg" class="mainpic"/>
+
+<div class="form"><img src="form.png"></div>
+
+</body>
+<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+<script>
+$( '.mainpic' ).click(function() {
+  $( '.form' ).addClass('show');
+});
+$( '.form img' ).click(function() {
+  $( '.form' ).removeClass('show');
+});
+</script>
+</html>
