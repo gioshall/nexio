@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>斗金棋牌</title>
-    <link rel="stylesheet" href="css/style.css">
+    <title>斗金</title>
+    <link rel="stylesheet" href="css/style-v1.css">
 </head>
 <body>
 
@@ -18,14 +18,12 @@
     
     <img src="img/p01.png" class="p01">
     <div class="btns">
-            <img src="img/t-promo.jpg" class="promo">
-        <a href="https://fir.im/mtxj">
-            <img src="img/btn-01.png">
-        </a>
-        <a href="http://official.qpgame666.com/index.php/Download/load_game/parent_id/108135">
-            <img src="img/btn-02.png">
+        <img src="img/t-promo-v3.jpg" class="promo">
+        <a href="http://doujinqipai2.com/index.php/Download/load_game/parent_id/108135">
+            <img src="img/btn-join-v1.png">
         </a>
     </div>
+    
 </div>
 <div class="main">
     <img src="img/bg03.jpg">
@@ -39,9 +37,47 @@
     <img src="img/p03.png" class="p03">
 </div>
 <div class="main">
-<a href="https://fir.im/mtxj" class="banner">
-    <img src="img/banner.png">
+<a href="http://doujinqipai2.com/index.php/Download/load_game/parent_id/108135" class="banner">
+    <img src="img/banner-v1.png">
 </a>
 </div>
+<script type="text/javascript">
+    function is_weixin() {
+        var ua = navigator.userAgent.toLowerCase();
+        if (ua.match(/MicroMessenger/i) == "micromessenger") {
+            return true;
+        } else {
+            return false;
+        }
+    }
+    var isWeixin = is_weixin();
+    var winHeight = typeof window.innerHeight != 'undefined' ? window.innerHeight : document.documentElement.clientHeight;
+    function loadHtml(){
+        var div = document.createElement('div');
+        div.id = 'weixin-tip';
+        div.innerHTML = '<p><img src="img/live_weixin.png" alt="微信打开" style="width:100%"/></p>';
+        document.body.appendChild(div);
+    }
+    
+    function loadStyleText(cssText) {
+        var style = document.createElement('style');
+        style.rel = 'stylesheet';
+        style.type = 'text/css';
+        try {
+            style.appendChild(document.createTextNode(cssText));
+        } catch (e) {
+            style.styleSheet.cssText = cssText; //ie9以下
+        }
+        var head=document.getElementsByTagName("head")[0]; //head标签之间加上style样式
+        head.appendChild(style); 
+    }
+    var cssText = "#weixin-tip{position: fixed; left:0; top:0; background: rgba(0,0,0,0.8); filter:alpha(opacity=80); width: 100%; height:100%; z-index: 100;} #weixin-tip p{text-align: center; margin-top: 10%; padding:0 5%;}";
+    if(isWeixin){
+        loadHtml();
+        loadStyleText(cssText);
+    }
+</script>
+
+<script type="text/javascript">var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cspan id='cnzz_stat_icon_1275087515'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s22.cnzz.com/z_stat.php%3Fid%3D1275087515%26show%3Dpic1' type='text/javascript'%3E%3C/script%3E"));</script>
 </body>
 </html>

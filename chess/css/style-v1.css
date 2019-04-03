@@ -80,7 +80,7 @@ body {
 
 .btns a,
 .btns img {
-    width: 50%;
+    width: 100%;
     height: auto;
     display: inline-block;
 }
@@ -97,3 +97,10 @@ body {
 
 .main .logo,.main .p01,.main .p03 {bottom: 0;}
 .main .p02 {top: 0;}
+
+span a {
+    position: fixed;
+    bottom: 0;
+    left: 5px;
+    opacity: 0.8;
+}
